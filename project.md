@@ -95,7 +95,6 @@ Osoba chcąca zakupić produkt na aukcji.
 
 4.B. Aukcja została zakończona
 * 4.B.1. System informuje o zakończeniu aukcji.
-* 4.B.2. Koniec przypadku użycia.
 
 ---
 
@@ -116,14 +115,13 @@ Osoba chcąca zakupić produkt na aukcji.
 2.A. Brak ofert w aukcji
 * 2.A.1. System oznacza aukcję jako nierozstrzygniętą.
 * 2.A.2. System powiadamia sprzedającego.
-* 2.A.3. Koniec przypadku użycia.
 
 ---
 
 <a id="uc4"></a>
 ### UC4: Realizacja płatności
 
-**Aktorzy:** [Kupujący](#ac2)
+**Aktorzy:** [Kupujący](#ac2), [Sprzedający](#ac1)
 
 **Scenariusz główny:**
 1. [Kupujący](#ac2) wybiera wygraną aukcję.
@@ -131,7 +129,7 @@ Osoba chcąca zakupić produkt na aukcji.
 3. [Kupujący](#ac2) realizuje płatność.
 4. System weryfikuje otrzymanie płatności.
 5. System aktualizuje status aukcji.
-6. System powiadamia sprzedającego o otrzymaniu płatności.
+6. System powiadamia [Sprzedającego](#ac1) o otrzymaniu płatności.
 
 **Scenariusze alternatywne:** 
 
@@ -144,22 +142,21 @@ Osoba chcąca zakupić produkt na aukcji.
 <a id="uc5"></a>
 ### UC5: Potwierdzenie dostawy
 
-**Aktorzy:** [Sprzedający](#ac1)
+**Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2)
 
 **Scenariusz główny:**
 1. [Sprzedający](#ac1) wybiera opłaconą aukcję.
 2. System wyświetla szczegóły aukcji.
 3. [Sprzedający](#ac1) potwierdza przekazanie produktu.
 4. System aktualizuje status aukcji i produktu.
-5. System powiadamia kupującego.
+5. System powiadamia [Kupującego](#ac2).
 
 **Scenariusze alternatywne:** 
 
 1.A. Aukcja nie została opłacona
 * 1.A.1. System informuje o braku płatności.
-* 1.A.2. Koniec przypadku użycia.
 
-## Obiekty biznesowe
+## Obiekty biznesowe (inaczej obiekty dziedzinowe lub informatyczne)
 
 ### BO1: Aukcja
 
@@ -187,7 +184,7 @@ Złożenie oferty wymaga zaproponowania kwoty wyższej niż aktualnie oferowana 
 <a id="br2"></a>
 ### BR2: Rozstrzygnięcie aukcji
 
-Aukcję wygrywa ten z [Kupujący](#ac2)ch, który w momencie jej zakończenia (upłynięcia czasu) złożył najwyższą ofertę.
+Aukcję wygrywa ten z [Kupujących](#ac2), który w momencie jej zakończenia (upłynięcia czasu) złożył najwyższą ofertę.
 
 ## Macierz CRUDL
 
