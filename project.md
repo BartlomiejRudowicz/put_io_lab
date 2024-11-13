@@ -121,7 +121,7 @@ Osoba chcąca zakupić produkt na aukcji.
 <a id="uc4"></a>
 ### UC4: Realizacja płatności
 
-**Aktorzy:** [Kupujący](#ac2), [Sprzedający](#ac1)
+**Aktorzy:** [Kupujący](#ac2)
 
 **Scenariusz główny:**
 1. [Kupujący](#ac2) wybiera wygraną aukcję.
@@ -129,7 +129,7 @@ Osoba chcąca zakupić produkt na aukcji.
 3. [Kupujący](#ac2) realizuje płatność.
 4. System weryfikuje otrzymanie płatności.
 5. System aktualizuje status aukcji.
-6. System powiadamia [Sprzedającego](#ac1) o otrzymaniu płatności.
+6. System powiadamia sprzedającego o otrzymaniu płatności.
 
 **Scenariusze alternatywne:** 
 
@@ -142,14 +142,14 @@ Osoba chcąca zakupić produkt na aukcji.
 <a id="uc5"></a>
 ### UC5: Potwierdzenie dostawy
 
-**Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2)
+**Aktorzy:** [Sprzedający](#ac1)
 
 **Scenariusz główny:**
 1. [Sprzedający](#ac1) wybiera opłaconą aukcję.
 2. System wyświetla szczegóły aukcji.
 3. [Sprzedający](#ac1) potwierdza przekazanie produktu.
 4. System aktualizuje status aukcji i produktu.
-5. System powiadamia [Kupującego](#ac2).
+5. System powiadamia kupującego.
 
 **Scenariusze alternatywne:** 
 
